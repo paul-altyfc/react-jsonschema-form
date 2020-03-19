@@ -13,7 +13,7 @@ module.exports = {
         title: "Company Number",
         default: "",
       },
-      nestedList: {
+      previous_names: {
         type: "array",
         title: "Previous Names",
         items: {
@@ -38,7 +38,7 @@ module.exports = {
     },
   },
   uiSchema: {
-    nestedList: {
+    previous_names: {
       "ui:options": {
         addable: false,
         orderable: false,
@@ -50,13 +50,14 @@ module.exports = {
           orderable: false,
           removable: false,
         },
+        "ui:disabled": true,
       },
     },
   },
   formData: {
     name: "BP P.L.C.",
     company_number: "00102498",
-    nestedList: [
+    previous_names: [
       ["BP AMOCO P.L.C.", "1998-12-31", "2001-05-01"],
       ["THE BRITISH PETROLEUM COMPANY P.L.C.", "1909-04-14", "1998-12-31"],
     ],
