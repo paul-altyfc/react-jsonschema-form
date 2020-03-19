@@ -12,11 +12,12 @@
     "lint": "lerna run lint",
     "cs-check": "lerna run cs-check",
     "cs-format": "lerna run cs-format",
-    "dist": "lerna run dist"
+    "dist": "lerna run dist",
+    "start": "lerna run start --stream --parallel"
   },
   "dependencies": {
-    "prettier": "^1.18.2",
-    "lerna": "^3.18.3"
+    "lerna": "^3.20.2",
+    "prettier": "^1.18.2"
   },
   "prettier": {
     "jsxBracketSameLine": true,
