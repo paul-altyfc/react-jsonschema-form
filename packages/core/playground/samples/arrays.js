@@ -13,27 +13,11 @@ module.exports = {
         title: "Company Number",
         default: "",
       },
-      previous_names: {
-        type: "array",
-        title: "Previous Names",
-        items: {
-          type: "array",
-          title: " ",
-          items: [
-            {
-              title: "Company Name",
-              type: "string",
-            },
-            {
-              title: "Start Date",
-              type: "string",
-            },
-            {
-              title: "End Date",
-              type: "string",
-            },
-          ],
-        },
+      previous_names: 
+    	{ type: "array", title: "Previous Names", items: 
+    		{ type: "object", properties: 
+        	{ company_name: { type: "string", title: "Company Name" }, start_date: { type: "string", title: "Start Date" }, end_date: { type: "string", title: "End Date" } },
+        }
       },
     },
   },
@@ -58,8 +42,16 @@ module.exports = {
     name: "BP P.L.C.",
     company_number: "00102498",
     previous_names: [
-      ["BP AMOCO P.L.C.", "1998-12-31", "2001-05-01"],
-      ["THE BRITISH PETROLEUM COMPANY P.L.C.", "1909-04-14", "1998-12-31"],
-    ],
+      {
+        company_name: "BP AMOCO P.L.C.",
+        start_date: "1998-12-31",
+        end_date: "2001-05-01"
+      },
+      {
+        company_name: "THE BRITISH PETROLEUM COMPANY P.L.C.",
+        start_date: "1909-04-14",
+        end_date: "1998-12-31"
+      }
+      ],    
   },
 };
