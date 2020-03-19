@@ -25,7 +25,8 @@ function ArrayFieldTitle({ TitleField, idSchema, title, required }) {
     return null;
   }
   const id = `${idSchema.$id}__title`;
-  return <TitleField id={id} title={title} required={required} />;
+  return <TitleField id={id} title={title} />;
+  // return <TitleField id={id} title={title} required={required} />;
 }
 
 function ArrayFieldDescription({ DescriptionField, idSchema, description }) {
